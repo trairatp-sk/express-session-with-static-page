@@ -3,16 +3,6 @@ const clickedText = document.querySelector("#clicked-text");
 const addButton = document.querySelector("#add-button");
 const resetButton = document.querySelector("#reset-button");
 
-// fetch("/").then((response) => {
-// 	return response.json();
-// 	console.log({ response });
-// });
-// .then((data) => {
-// 	const visitedOccurrence = data.visitedOccurrence;
-// 	visitedText.textContent =
-// 		"you clicked add button " + JSON.stringify(visitedOccurrence) + " times";
-// });
-
 fetch("/get-click")
 	.then((response) => {
 		return response.json();
@@ -24,7 +14,7 @@ fetch("/get-click")
 	});
 
 addButton.addEventListener("click", () => {
-	fetch("update-click", { method: "PUT" })
+	fetch("/update-click", { method: "PUT" })
 		.then((response) => {
 			return response.json();
 		})

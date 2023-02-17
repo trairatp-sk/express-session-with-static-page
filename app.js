@@ -33,18 +33,12 @@ app.use(function (req, res, next) {
 	if (pathname === "/reset-click") {
 		req.session.clickAmount = 0;
 	}
-	if (pathname === "/") {
-		req.session.visit += 1;
-	}
 
 	next();
 });
 
 app.get("/", (req, res) => {
-	const visitedOccurrence = req.session.visit;
-	console.log({ clickAmount });
 	res.sendFile("/public/index.html");
-	res.send(JSON.stringify({ visitedOccurrence: visitedOccurrence }));
 });
 
 app.get("/get-click", function (req, res) {
