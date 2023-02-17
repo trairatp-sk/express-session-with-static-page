@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100vh; width: 100vw">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body
+		style="
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			border: 1px solid red;
+		"
+	>
+		<h1>Hello Click Session</h1>
+		<h3 id="visit-occurrence"></h3>
+		<div
+			class="container"
+			style="
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			"
+		>
+			<h3 id="clicked-text">You clicked +1 button ... times</h3>
+			<div
+				class="button-container"
+				style="
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 150px;
+				"
+			>
+				<button id="add-button">+1</button>
+				<button id="reset-button">reset</button>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>
